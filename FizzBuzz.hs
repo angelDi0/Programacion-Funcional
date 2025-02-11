@@ -9,7 +9,7 @@ lessThan20 :: Int -> String
 lessThan20 n 
     | n >= 0 && n < 20 = 
       let answers = words ("zero one two three four five six seven eight nine ten "++
-                           "eleven: twelve thirteen fourteen fifteen sixteen "++
+                           "eleven twelve thirteen fourteen fifteen sixteen "++
                            "seventeen eighteen ninteen")
     in answers !! (n-1)
 
@@ -31,7 +31,7 @@ esFizz :: Int -> String
 esFizz n 
     | n > 100 || n < 0                     = "Fuera del rango!!"
     | n == 0                               = "zero"
-    | n `mod` 5 == 0 && n `mod` 3 == 0     = "FizzBuzz"
-    | n `mod` 3 == 0                       = "Fizz" 
-    | n `mod` 5 == 0                       = "Buzz"
+    | n `mod` 5 == 0 && n `mod` 3 == 0     = "FizzBuzz!"
+    | n `mod` 5 == 0                       = "Fizz!" 
+    | n `mod` 3 == 0                       = "Buzz!"
     | n > 0 = number(n)
